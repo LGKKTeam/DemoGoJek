@@ -15,7 +15,12 @@
 		2E07EFA8250CAFBD004CFBF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E07EFA6250CAFBD004CFBF5 /* LaunchScreen.storyboard */; };
 		2E07EFB3250CAFBD004CFBF5 /* DemoGoJekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E07EFB2250CAFBD004CFBF5 /* DemoGoJekTests.swift */; };
 		2E07EFBE250CAFBD004CFBF5 /* DemoGoJekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E07EFBD250CAFBD004CFBF5 /* DemoGoJekUITests.swift */; };
+		2E4560DF250CC49200267DD8 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560DC250CC49200267DD8 /* UIImage+Extension.swift */; };
+		2E4560E0250CC49200267DD8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560DD250CC49200267DD8 /* UIViewController+Extension.swift */; };
+		2E4560E1250CC49200267DD8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560DE250CC49200267DD8 /* Reachability.swift */; };
 		2E54FCCE250CB99A00EAEEB7 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E54FCCD250CB99900EAEEB7 /* FakeData.json */; };
+		2E54FCD3250CBC1500EAEEB7 /* TinderSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54FCD1250CBC1500EAEEB7 /* TinderSwipeView.swift */; };
+		2E54FCD4250CBC1500EAEEB7 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +55,12 @@
 		2E07EFB9250CAFBD004CFBF5 /* DemoGoJekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoGoJekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E07EFBD250CAFBD004CFBF5 /* DemoGoJekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoGoJekUITests.swift; sourceTree = "<group>"; };
 		2E07EFBF250CAFBD004CFBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E4560DC250CC49200267DD8 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		2E4560DD250CC49200267DD8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2E4560DE250CC49200267DD8 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2E54FCCD250CB99900EAEEB7 /* FakeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeData.json; sourceTree = "<group>"; };
+		2E54FCD1250CBC1500EAEEB7 /* TinderSwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderSwipeView.swift; sourceTree = "<group>"; };
+		2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,8 @@
 		2E07EF9A250CAFBC004CFBF5 /* DemoGoJek */ = {
 			isa = PBXGroup;
 			children = (
+				2E85B686250CC3FE00F13E18 /* Services */,
+				2E54FCCF250CBA3F00EAEEB7 /* Common */,
 				2E2498FF250CB49000D6E7EE /* Resouces */,
 				2E07EF9B250CAFBC004CFBF5 /* AppDelegate.swift */,
 				2E07EF9D250CAFBC004CFBF5 /* SceneDelegate.swift */,
@@ -137,6 +149,41 @@
 				2E54FCCD250CB99900EAEEB7 /* FakeData.json */,
 			);
 			path = Resouces;
+			sourceTree = "<group>";
+		};
+		2E4560DB250CC49200267DD8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2E4560DC250CC49200267DD8 /* UIImage+Extension.swift */,
+				2E4560DD250CC49200267DD8 /* UIViewController+Extension.swift */,
+				2E4560DE250CC49200267DD8 /* Reachability.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2E54FCCF250CBA3F00EAEEB7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2E4560DB250CC49200267DD8 /* Helper */,
+				2E54FCD0250CBBFD00EAEEB7 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2E54FCD0250CBBFD00EAEEB7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */,
+				2E54FCD1250CBC1500EAEEB7 /* TinderSwipeView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2E85B686250CC3FE00F13E18 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +340,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E07EFA0250CAFBC004CFBF5 /* ViewController.swift in Sources */,
+				2E54FCD3250CBC1500EAEEB7 /* TinderSwipeView.swift in Sources */,
 				2E07EF9C250CAFBC004CFBF5 /* AppDelegate.swift in Sources */,
+				2E4560DF250CC49200267DD8 /* UIImage+Extension.swift in Sources */,
+				2E4560E0250CC49200267DD8 /* UIViewController+Extension.swift in Sources */,
+				2E54FCD4250CBC1500EAEEB7 /* TinderCard.swift in Sources */,
+				2E4560E1250CC49200267DD8 /* Reachability.swift in Sources */,
 				2E07EF9E250CAFBC004CFBF5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
