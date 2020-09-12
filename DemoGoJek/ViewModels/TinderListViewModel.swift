@@ -8,6 +8,8 @@
 
 import UIKit
 
+let storeFileName = "DemoGoJek"
+
 class TinderListViewModel {
   private var userResponse: UsersResponseModel?
   private var error: Error?
@@ -25,6 +27,7 @@ class TinderListViewModel {
 
   func start() {
     assert(updateUIBlock != nil, "Missing code: updateUIBlock")
+    loadCahcedData()
     service.getNews { [weak self] userResponseModel, error in
       guard let strongSelf = self else { return }
       strongSelf.error = error
@@ -32,12 +35,20 @@ class TinderListViewModel {
         strongSelf.showError(error)
       } else if let userResponseModel = userResponseModel {
         strongSelf.userResponse = userResponseModel
-        Storage.store(userResponseModel, to: .documents, as: "DemoGoJek")
+        Storage.store(userResponseModel, to: .documents, as: storeFileName)
         strongSelf.updateUIBlock?()
       } else {
         // No data
         strongSelf.updateUIBlock?()
       }
+    }
+  }
+
+  func loadCahcedData() {
+    let userResponseModel = Storage.retrieve(storeFileName, from: .documents, as: UsersResponseModel.self)
+    if let userResponseModel = userResponseModel {
+      userResponse = userResponseModel
+      updateUIBlock?()
     }
   }
 

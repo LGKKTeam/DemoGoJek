@@ -42,7 +42,7 @@ class TinderViewController: UIViewController {
   }
 
   func setupCaroselUI() {
-    // Dynamically create view for each tinder card
+    /// Dynamically create view for each tinder card
     let contentView: (Int, CGRect, User) -> (UIView) = { (_: Int, frame: CGRect, userModel: User) -> (UIView) in
       let customView = CustomView(frame: frame)
       customView.userViewModel = UserViewModel(user: userModel)
@@ -55,24 +55,6 @@ class TinderViewController: UIViewController {
   }
 
   func reloadUI() {
-    swipeView.showTinderCards(with: viewModel.users ?? [])
-  }
-
-  @IBAction func leftSwipeAction(_ sender: Any) {
-    if let swipeView = swipeView {
-      swipeView.makeLeftSwipeAction()
-    }
-  }
-
-  @IBAction func rightSwipeAction(_ sender: Any) {
-    if let swipeView = swipeView {
-      swipeView.makeRightSwipeAction()
-    }
-  }
-
-  @IBAction func undoButtonPressed(_ sender: Any) {
-    if let swipeView = swipeView {
-      swipeView.undoCurrentTinderCard()
-    }
+    swipeView.showTinderCards(with: viewModel.users ?? [], isDummyShow: false)
   }
 }
