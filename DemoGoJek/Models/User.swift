@@ -21,7 +21,6 @@ struct User: Codable {
   var name: Name?
   var location: Location?
   var email: String?
-  var login: Login?
   var dob, registered: Dob?
   var phone, cell: String?
   var id: ID?
@@ -52,7 +51,6 @@ extension User {
     name: Name?? = nil,
     location: Location?? = nil,
     email: String?? = nil,
-    login: Login?? = nil,
     dob: Dob?? = nil,
     registered: Dob?? = nil,
     phone: String?? = nil,
@@ -66,7 +64,6 @@ extension User {
       name: name ?? self.name,
       location: location ?? self.location,
       email: email ?? self.email,
-      login: login ?? self.login,
       dob: dob ?? self.dob,
       registered: registered ?? self.registered,
       phone: phone ?? self.phone,

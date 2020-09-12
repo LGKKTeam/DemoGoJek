@@ -16,15 +16,11 @@
 		2E07EFB3250CAFBD004CFBF5 /* DemoGoJekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E07EFB2250CAFBD004CFBF5 /* DemoGoJekTests.swift */; };
 		2E07EFBE250CAFBD004CFBF5 /* DemoGoJekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E07EFBD250CAFBD004CFBF5 /* DemoGoJekUITests.swift */; };
 		2E4560DF250CC49200267DD8 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560DC250CC49200267DD8 /* UIImage+Extension.swift */; };
-		2E4560E0250CC49200267DD8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560DD250CC49200267DD8 /* UIViewController+Extension.swift */; };
-		2E4560E1250CC49200267DD8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560DE250CC49200267DD8 /* Reachability.swift */; };
 		2E4560E4250CC5FF00267DD8 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560E2250CC5FF00267DD8 /* Storage.swift */; };
 		2E4560F7250CC76F00267DD8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560E7250CC76F00267DD8 /* Location.swift */; };
 		2E4560F8250CC76F00267DD8 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560E8250CC76F00267DD8 /* Gender.swift */; };
 		2E4560F9250CC76F00267DD8 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560E9250CC76F00267DD8 /* Picture.swift */; };
 		2E4560FA250CC76F00267DD8 /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560EA250CC76F00267DD8 /* ID.swift */; };
-		2E4560FB250CC76F00267DD8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560EB250CC76F00267DD8 /* Login.swift */; };
-		2E4560FC250CC76F00267DD8 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560EC250CC76F00267DD8 /* Info.swift */; };
 		2E4560FD250CC76F00267DD8 /* Street.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560ED250CC76F00267DD8 /* Street.swift */; };
 		2E4560FE250CC76F00267DD8 /* Postcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560EE250CC76F00267DD8 /* Postcode.swift */; };
 		2E456100250CC76F00267DD8 /* JSONSchemaSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F0250CC76F00267DD8 /* JSONSchemaSupport.swift */; };
@@ -41,12 +37,14 @@
 		2E456112250CD3BA00267DD8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E456111250CD3BA00267DD8 /* UIView+Extension.swift */; };
 		2E456114250CD3DD00267DD8 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E456113250CD3DD00267DD8 /* NSObject+Extension.swift */; };
 		2E456116250CD89100267DD8 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E456115250CD89100267DD8 /* UserViewModel.swift */; };
-		2E456118250CDBFA00267DD8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E456117250CDBFA00267DD8 /* GradientView.swift */; };
 		2E45611A250CE0AF00267DD8 /* RestAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E456119250CE0AF00267DD8 /* RestAPIServiceProtocol.swift */; };
-		2E54FCCE250CB99A00EAEEB7 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E54FCCD250CB99900EAEEB7 /* FakeData.json */; };
 		2E54FCD3250CBC1500EAEEB7 /* TinderSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54FCD1250CBC1500EAEEB7 /* TinderSwipeView.swift */; };
 		2E54FCD4250CBC1500EAEEB7 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */; };
+		2E592F7E250D1EE900884FB2 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E54FCCD250CB99900EAEEB7 /* FakeData.json */; };
+		2E592F80250D28F800884FB2 /* RestAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E592F7F250D28F800884FB2 /* RestAPIServiceTests.swift */; };
 		2E7B2B75250D1099000F0FCD /* RestAPIServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B2B74250D1099000F0FCD /* RestAPIServiceImpl.swift */; };
+		2E7B2B77250D1423000F0FCD /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B2B76250D1423000F0FCD /* MockAPIService.swift */; };
+		2E7B2B79250D14B6000F0FCD /* TinderListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B2B78250D14B6000F0FCD /* TinderListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,15 +80,11 @@
 		2E07EFBD250CAFBD004CFBF5 /* DemoGoJekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoGoJekUITests.swift; sourceTree = "<group>"; };
 		2E07EFBF250CAFBD004CFBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E4560DC250CC49200267DD8 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		2E4560DD250CC49200267DD8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		2E4560DE250CC49200267DD8 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2E4560E2250CC5FF00267DD8 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2E4560E7250CC76F00267DD8 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2E4560E8250CC76F00267DD8 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		2E4560E9250CC76F00267DD8 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		2E4560EA250CC76F00267DD8 /* ID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
-		2E4560EB250CC76F00267DD8 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		2E4560EC250CC76F00267DD8 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		2E4560ED250CC76F00267DD8 /* Street.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Street.swift; sourceTree = "<group>"; };
 		2E4560EE250CC76F00267DD8 /* Postcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postcode.swift; sourceTree = "<group>"; };
 		2E4560F0250CC76F00267DD8 /* JSONSchemaSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSchemaSupport.swift; sourceTree = "<group>"; };
@@ -107,12 +101,14 @@
 		2E456111250CD3BA00267DD8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2E456113250CD3DD00267DD8 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		2E456115250CD89100267DD8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		2E456117250CDBFA00267DD8 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2E456119250CE0AF00267DD8 /* RestAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIServiceProtocol.swift; sourceTree = "<group>"; };
 		2E54FCCD250CB99900EAEEB7 /* FakeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeData.json; sourceTree = "<group>"; };
 		2E54FCD1250CBC1500EAEEB7 /* TinderSwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderSwipeView.swift; sourceTree = "<group>"; };
 		2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
+		2E592F7F250D28F800884FB2 /* RestAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIServiceTests.swift; sourceTree = "<group>"; };
 		2E7B2B74250D1099000F0FCD /* RestAPIServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPIServiceImpl.swift; sourceTree = "<group>"; };
+		2E7B2B76250D1423000F0FCD /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
+		2E7B2B78250D14B6000F0FCD /* TinderListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +164,6 @@
 				2E4560E6250CC76F00267DD8 /* Models */,
 				2E85B686250CC3FE00F13E18 /* Services */,
 				2E54FCCF250CBA3F00EAEEB7 /* Common */,
-				2E2498FF250CB49000D6E7EE /* Resouces */,
 				2E07EF9B250CAFBC004CFBF5 /* AppDelegate.swift */,
 				2E07EF9D250CAFBC004CFBF5 /* SceneDelegate.swift */,
 				2E07EFA1250CAFBC004CFBF5 /* Main.storyboard */,
@@ -182,8 +177,12 @@
 		2E07EFB1250CAFBD004CFBF5 /* DemoGoJekTests */ = {
 			isa = PBXGroup;
 			children = (
+				2E2498FF250CB49000D6E7EE /* Resouces */,
+				2E7B2B76250D1423000F0FCD /* MockAPIService.swift */,
 				2E07EFB2250CAFBD004CFBF5 /* DemoGoJekTests.swift */,
 				2E07EFB4250CAFBD004CFBF5 /* Info.plist */,
+				2E7B2B78250D14B6000F0FCD /* TinderListViewModelTests.swift */,
+				2E592F7F250D28F800884FB2 /* RestAPIServiceTests.swift */,
 			);
 			path = DemoGoJekTests;
 			sourceTree = "<group>";
@@ -209,8 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				2E4560DC250CC49200267DD8 /* UIImage+Extension.swift */,
-				2E4560DD250CC49200267DD8 /* UIViewController+Extension.swift */,
-				2E4560DE250CC49200267DD8 /* Reachability.swift */,
 				2E456111250CD3BA00267DD8 /* UIView+Extension.swift */,
 				2E456113250CD3DD00267DD8 /* NSObject+Extension.swift */,
 			);
@@ -224,10 +221,8 @@
 				2E4560F1250CC76F00267DD8 /* Dob.swift */,
 				2E4560E8250CC76F00267DD8 /* Gender.swift */,
 				2E4560EA250CC76F00267DD8 /* ID.swift */,
-				2E4560EC250CC76F00267DD8 /* Info.swift */,
 				2E4560F0250CC76F00267DD8 /* JSONSchemaSupport.swift */,
 				2E4560E7250CC76F00267DD8 /* Location.swift */,
-				2E4560EB250CC76F00267DD8 /* Login.swift */,
 				2E4560F5250CC76F00267DD8 /* Name.swift */,
 				2E4560E9250CC76F00267DD8 /* Picture.swift */,
 				2E4560EE250CC76F00267DD8 /* Postcode.swift */,
@@ -271,7 +266,6 @@
 		2E54FCD0250CBBFD00EAEEB7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2E456117250CDBFA00267DD8 /* GradientView.swift */,
 				2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */,
 				2E54FCD1250CBC1500EAEEB7 /* TinderSwipeView.swift */,
 			);
@@ -396,7 +390,6 @@
 				2E07EFA8250CAFBD004CFBF5 /* LaunchScreen.storyboard in Resources */,
 				2E456110250CD17700267DD8 /* CustomView.xib in Resources */,
 				2E07EFA5250CAFBD004CFBF5 /* Assets.xcassets in Resources */,
-				2E54FCCE250CB99A00EAEEB7 /* FakeData.json in Resources */,
 				2E07EFA3250CAFBC004CFBF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E592F7E250D1EE900884FB2 /* FakeData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +439,6 @@
 				2E456109250CCE6C00267DD8 /* User.swift in Sources */,
 				2E456112250CD3BA00267DD8 /* UIView+Extension.swift in Sources */,
 				2E4560F8250CC76F00267DD8 /* Gender.swift in Sources */,
-				2E4560FC250CC76F00267DD8 /* Info.swift in Sources */,
 				2E07EFA0250CAFBC004CFBF5 /* TinderViewController.swift in Sources */,
 				2E456114250CD3DD00267DD8 /* NSObject+Extension.swift in Sources */,
 				2E45610C250CCEFE00267DD8 /* TinderListViewModel.swift in Sources */,
@@ -456,7 +449,6 @@
 				2E4560FA250CC76F00267DD8 /* ID.swift in Sources */,
 				2E456106250CC76F00267DD8 /* Coordinates.swift in Sources */,
 				2E07EF9C250CAFBC004CFBF5 /* AppDelegate.swift in Sources */,
-				2E4560FB250CC76F00267DD8 /* Login.swift in Sources */,
 				2E456102250CC76F00267DD8 /* Timezone.swift in Sources */,
 				2E456100250CC76F00267DD8 /* JSONSchemaSupport.swift in Sources */,
 				2E456101250CC76F00267DD8 /* Dob.swift in Sources */,
@@ -466,11 +458,8 @@
 				2E4560FE250CC76F00267DD8 /* Postcode.swift in Sources */,
 				2E45611A250CE0AF00267DD8 /* RestAPIServiceProtocol.swift in Sources */,
 				2E456103250CC76F00267DD8 /* Title.swift in Sources */,
-				2E456118250CDBFA00267DD8 /* GradientView.swift in Sources */,
-				2E4560E0250CC49200267DD8 /* UIViewController+Extension.swift in Sources */,
 				2E4560E4250CC5FF00267DD8 /* Storage.swift in Sources */,
 				2E54FCD4250CBC1500EAEEB7 /* TinderCard.swift in Sources */,
-				2E4560E1250CC49200267DD8 /* Reachability.swift in Sources */,
 				2E456116250CD89100267DD8 /* UserViewModel.swift in Sources */,
 				2E4560F9250CC76F00267DD8 /* Picture.swift in Sources */,
 				2E07EF9E250CAFBC004CFBF5 /* SceneDelegate.swift in Sources */,
@@ -482,7 +471,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E592F80250D28F800884FB2 /* RestAPIServiceTests.swift in Sources */,
+				2E7B2B77250D1423000F0FCD /* MockAPIService.swift in Sources */,
 				2E07EFB3250CAFBD004CFBF5 /* DemoGoJekTests.swift in Sources */,
+				2E7B2B79250D14B6000F0FCD /* TinderListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

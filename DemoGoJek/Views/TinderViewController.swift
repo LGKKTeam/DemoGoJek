@@ -20,10 +20,9 @@ class TinderViewController: UIViewController {
 
     service = RestAPIServiceImpl()
     viewModel = TinderListViewModel(service: service)
-    viewModel.updateUIBlock = { [weak self] in
-      guard let strongSelf = self else { return }
+    viewModel.updateUIBlock = { [unowned self] in
       DispatchQueue.main.async {
-        strongSelf.reloadUI()
+        self.reloadUI()
       }
     }
 
@@ -55,6 +54,6 @@ class TinderViewController: UIViewController {
   }
 
   func reloadUI() {
-    swipeView.showTinderCards(with: viewModel.users ?? [], isDummyShow: false)
+    swipeView.showTinderCards(with: viewModel.users, isDummyShow: false)
   }
 }

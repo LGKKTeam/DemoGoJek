@@ -10,6 +10,10 @@ import Foundation
 class RestAPIServiceImpl: RestAPIServiceProtocol {
   func getNews(completion: @escaping ((UsersResponseModel?, Error?) -> Void)) {
     let urlString = "https://randomuser.me/api/?results=50"
+    request(urlString: urlString, completion: completion)
+  }
+
+  func request(urlString: String, completion: @escaping ((UsersResponseModel?, Error?) -> Void)) {
     let url = URL(string: urlString)
     guard let _url = url else {
       let dic = [NSLocalizedDescriptionKey: "Invalid url request"]

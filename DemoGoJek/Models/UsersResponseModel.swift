@@ -18,7 +18,6 @@ import Foundation
 
 struct UsersResponseModel: Codable {
   var results: [User]?
-  var info: Info?
 }
 
 // MARK: UsersResponseModel convenience initializers and mutators
@@ -40,12 +39,10 @@ extension UsersResponseModel {
   }
 
   func with(
-    results: [User]?? = nil,
-    info: Info?? = nil
+    results: [User]?? = nil
   ) -> UsersResponseModel {
     return UsersResponseModel(
-      results: results ?? self.results,
-      info: info ?? self.info
+      results: results ?? self.results
     )
   }
 

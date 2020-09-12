@@ -11,7 +11,7 @@ import UIKit
 let storeFileName = "DemoGoJek"
 
 class TinderListViewModel {
-  private var userResponse: UsersResponseModel?
+  var userResponse: UsersResponseModel?
   private var error: Error?
   private var service: RestAPIServiceProtocol!
 
@@ -21,7 +21,7 @@ class TinderListViewModel {
     self.service = service
   }
 
-  var users: [User]? {
+  var users: [User] {
     return userResponse?.results ?? []
   }
 
