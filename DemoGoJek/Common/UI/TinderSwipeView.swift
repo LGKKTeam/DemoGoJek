@@ -40,8 +40,7 @@ public class TinderSwipeView<Element>: UIView {
   fileprivate let contentView: ContentView?
   public typealias ContentView = (_ index: Int, _ frame: CGRect, _ element: Element) -> (UIView)
 
-  public init(frame: CGRect,
-              contentView: @escaping ContentView, bufferSize: Int = 3) {
+  public init(frame: CGRect, contentView: @escaping ContentView, bufferSize: Int = 3) {
     self.contentView = contentView
     self.bufferSize = bufferSize
     super.init(frame: frame)
@@ -97,11 +96,16 @@ public class TinderSwipeView<Element>: UIView {
   /*
    * Creating invidual cards
    */
+
+  fileprivate func calculateCardFrame(index: Int) -> CGRect {
+    return CGRect(x: CGFloat(index) * inset,
+                  y: inset + (CGFloat(loadedCards.count) * sepeatorDistance),
+                  width: bounds.width - CGFloat(index) * (inset * 2),
+                  height: bounds.height - (CGFloat(bufferSize) * sepeatorDistance) - (inset * 2))
+  }
+
   fileprivate func createTinderCard(index: Int, element: Element) -> TinderCard {
-    let card = TinderCard(frame: CGRect(x: inset,
-                                        y: inset + (CGFloat(loadedCards.count) * sepeatorDistance),
-                                        width: bounds.width - (inset * 2),
-                                        height: bounds.height - (CGFloat(bufferSize) * sepeatorDistance) - (inset * 2)))
+    let card = TinderCard(frame: calculateCardFrame(index: index))
     card.delegate = self
     card.model = element
     card.addContentView(view: contentView?(index, card.bounds, element))
@@ -158,6 +162,10 @@ public class TinderSwipeView<Element>: UIView {
                                         element: allCards[index + loadedCards.count])
       insertSubview(tinderCard, belowSubview: loadedCards.last!)
       loadedCards.append(tinderCard)
+      for (index, card) in loadedCards.enumerated() {
+        card.frame = calculateCardFrame(index: index)
+        card.bounds = CGRect(x: 0, y: 0, width: card.frame.size.width, height: card.frame.size.height)
+      }
     }
 
     animateCardAfterSwiping()

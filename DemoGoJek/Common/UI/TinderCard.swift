@@ -60,7 +60,6 @@ class TinderCard: UIView {
    * Initializing View
    */
   func setupView() {
-    layer.cornerRadius = bounds.width / 20
     layer.shadowRadius = 3
     layer.shadowOpacity = 0.4
     layer.shadowOffset = CGSize(width: 0.5, height: 3)
@@ -74,13 +73,13 @@ class TinderCard: UIView {
     addGestureRecognizer(panGestureRecognizer)
 
     containerView = UIView(frame: bounds)
-    containerView.backgroundColor = .clear
 
     statusImageView = UIImageView(frame: CGRect(x: (frame.size.width / 2) - 37.5, y: 25, width: 75, height: 75))
     containerView.addSubview(statusImageView)
 
     overlayImageView = UIImageView(frame: bounds)
     containerView.addSubview(overlayImageView)
+    overlayImageView.fixInView(containerView)
   }
 
   /*
@@ -90,6 +89,7 @@ class TinderCard: UIView {
     if let overlay = view {
       self.overlay = overlay
       insertSubview(overlay, belowSubview: containerView)
+      overlay.fixInView(self)
     }
   }
 
@@ -258,6 +258,8 @@ extension TinderCard: UIGestureRecognizerDelegate {
     case .began:
       originalPoint = center
       addSubview(containerView)
+      containerView.fixInView(self)
+      statusImageView.frame = CGRect(x: (frame.size.width / 2) - 37.5, y: 25, width: 75, height: 75)
       delegate?.didSelectCard(card: self)
     // in the middle of a swipe
     case .changed:
@@ -298,11 +300,11 @@ extension TinderCard: UIGestureRecognizerDelegate {
                      usingSpringWithDamping: 0.5,
                      initialSpringVelocity: 1.0,
                      options: [], animations: {
-        self.center = self.originalPoint
-        self.transform = CGAffineTransform(rotationAngle: 0)
-        self.statusImageView.alpha = 0
-        self.overlayImageView.alpha = 0
-      })
+                       self.center = self.originalPoint
+                       self.transform = CGAffineTransform(rotationAngle: 0)
+                       self.statusImageView.alpha = 0
+                       self.overlayImageView.alpha = 0
+                     })
     }
   }
 
