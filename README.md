@@ -9,6 +9,8 @@ This is a simple demo to match with Coding challenge’s requirement
 - Refresh function
 - Show Fav list
 - No extra libs require
+- MVVM
+- Unittest & UITest also
 
 Develop environment: XCode 11.7, swift 5
 
