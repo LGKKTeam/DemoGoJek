@@ -23,62 +23,28 @@ struct User: Codable {
   var email: String?
   var dob, registered: Dob?
   var phone, cell: String?
-  var id: ID?
+  var idUser: IDUser?
   var picture: Picture?
   var nat: String?
+
+  enum CodingKeys: String, CodingKey {
+    case gender
+    case name
+    case location
+    case email
+    case dob, registered
+    case phone, cell
+    case idUser = "id"
+    case picture
+    case nat
+  }
 }
 
-// MARK: Result convenience initializers and mutators
-
-extension User {
-  init(data: Data) throws {
-    self = try newJSONDecoder().decode(User.self, from: data)
-  }
-
-  init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-    guard let data = json.data(using: encoding) else {
-      throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+extension User: Equatable {
+  static func == (lhs: User, rhs: User) -> Bool {
+    if let userId1 = lhs.idUser?.value, let userId2 = rhs.idUser?.value {
+      return userId1 == userId2
     }
-    try self.init(data: data)
-  }
-
-  init(fromURL url: URL) throws {
-    try self.init(data: try Data(contentsOf: url))
-  }
-
-  func with(
-    gender: Gender?? = nil,
-    name: Name?? = nil,
-    location: Location?? = nil,
-    email: String?? = nil,
-    dob: Dob?? = nil,
-    registered: Dob?? = nil,
-    phone: String?? = nil,
-    cell: String?? = nil,
-    id: ID?? = nil,
-    picture: Picture?? = nil,
-    nat: String?? = nil
-  ) -> User {
-    return User(
-      gender: gender ?? self.gender,
-      name: name ?? self.name,
-      location: location ?? self.location,
-      email: email ?? self.email,
-      dob: dob ?? self.dob,
-      registered: registered ?? self.registered,
-      phone: phone ?? self.phone,
-      cell: cell ?? self.cell,
-      id: id ?? self.id,
-      picture: picture ?? self.picture,
-      nat: nat ?? self.nat
-    )
-  }
-
-  func jsonData() throws -> Data {
-    return try newJSONEncoder().encode(self)
-  }
-
-  func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-    return String(data: try self.jsonData(), encoding: encoding)
+    return false
   }
 }

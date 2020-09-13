@@ -8,20 +8,29 @@
 
 import UIKit
 
+enum UserInfoSection: Int {
+  case personal = 0
+  case calendar
+  case location
+  case phone
+  case lock
+}
+
 class CustomView: UIView {
   @IBOutlet private var contentView: UIView!
-  @IBOutlet private var nameLabel: UILabel!
-  @IBOutlet private var ageLabel: UILabel!
   @IBOutlet private var profileImageView: UIImageView!
   @IBOutlet private var profileContainerView: UIView!
+  @IBOutlet private var controlView: UIView!
+  @IBOutlet private var buttons: [UIButton]!
+  @IBOutlet private var contentContainerView: UIView!
+  weak var parentVC: UIViewController?
 
   var userViewModel: UserViewModel! {
     didSet {
-      self.nameLabel.text = userViewModel.userName
-      self.ageLabel.text = userViewModel.age
       if let url = URL(string: userViewModel.profileURLString) {
         self.profileImageView.load(url: url)
       }
+      handlerDisplayUserInfo(at: userViewModel.section)
     }
   }
 
@@ -50,5 +59,68 @@ class CustomView: UIView {
     profileImageView.contentMode = .scaleAspectFill
     profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
     profileImageView.clipsToBounds = true
+
+    for (index, btn) in buttons.enumerated() {
+      btn.tag = index
+      btn.tintColor = UIColor.darkGray
+    }
+  }
+
+  @IBAction func buttonTapped(_ sender: UIButton) {
+    if let infoSection = UserInfoSection(rawValue: sender.tag) {
+      switch infoSection {
+        case .personal, .calendar, .location:
+          handlerDisplayUserInfo(at: infoSection)
+        case .lock:
+          debugPrint("Lock?")
+        case .phone:
+          handleCallPhoneNumber(userViewModel.phone)
+      }
+    }
+  }
+
+  func handleCallPhoneNumber(_ phone: String?) {
+    if let phone = phone {
+      if let url = URL(string: "tel://\(phone)"), UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+      } else {
+        debugPrint("Cannot make a phone call")
+      }
+    }
+  }
+
+  func handlerDisplayUserInfo(at section: UserInfoSection) {
+    let viewController = infoViewController(at: section)
+    if var viewController = viewController as? TinderUserInfoViewProtocol {
+      viewController.userViewModel = userViewModel
+    }
+    if let viewController = viewController {
+      contentContainerView.subviews.first?.removeFromSuperview()
+      parentVC?.addChild(viewController)
+      contentContainerView.addSubview(viewController.view)
+      viewController.view.fixInView(contentContainerView)
+      viewController.didMove(toParent: parentVC)
+    }
+  }
+
+  func infoViewController(at section: UserInfoSection) -> UIViewController? {
+    switch section {
+      case .personal:
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(
+          withIdentifier: TinderUserInfoViewController.className)
+        return viewController
+      case .calendar:
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(
+          withIdentifier: TinderCalendarViewController.className)
+        return viewController
+      case .location:
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: TinderMapViewController.className)
+        return viewController
+      default:
+        return nil
+    }
   }
 }

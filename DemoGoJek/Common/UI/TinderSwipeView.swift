@@ -59,10 +59,7 @@ public class TinderSwipeView<Element>: UIView {
    * Showing Tinder cards to view
    */
   public func showTinderCards(with elements: [Element], isDummyShow: Bool = true) {
-    if elements.isEmpty {
-      return
-    }
-
+    resetData()
     allCards.append(contentsOf: elements)
 
     for (index, element) in elements.enumerated() {
@@ -81,6 +78,17 @@ public class TinderSwipeView<Element>: UIView {
 
     if isDummyShow {
       perform(#selector(loadAnimation), with: nil, afterDelay: 1.0)
+    }
+  }
+
+  private func resetData() {
+    index = 0
+    allCards.removeAll()
+    loadedCards.removeAll()
+    subviews.forEach { view in
+      if let view = view as? TinderCard {
+        view.removeFromSuperview()
+      }
     }
   }
 

@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let street = try Street(json)
+//   let iD = try ID(json)
 //
 // To read values from URLs:
 //
-//   let task = URLSession.shared.streetTask(with: url) { street, response, error in
-//     if let street = street {
+//   let task = URLSession.shared.iDTask(with: url) { iD, response, error in
+//     if let iD = iD {
 //       ...
 //     }
 //   }
@@ -14,9 +14,9 @@
 
 import Foundation
 
-// MARK: - Street
+// MARK: - ID
 
-struct Street: Codable {
-  var number: Int?
+struct IDUser: Codable {
   var name: String?
+  var value: String?
 }

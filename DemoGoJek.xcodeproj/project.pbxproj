@@ -20,13 +20,11 @@
 		2E4560F7250CC76F00267DD8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560E7250CC76F00267DD8 /* Location.swift */; };
 		2E4560F8250CC76F00267DD8 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560E8250CC76F00267DD8 /* Gender.swift */; };
 		2E4560F9250CC76F00267DD8 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560E9250CC76F00267DD8 /* Picture.swift */; };
-		2E4560FA250CC76F00267DD8 /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560EA250CC76F00267DD8 /* ID.swift */; };
 		2E4560FD250CC76F00267DD8 /* Street.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560ED250CC76F00267DD8 /* Street.swift */; };
 		2E4560FE250CC76F00267DD8 /* Postcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560EE250CC76F00267DD8 /* Postcode.swift */; };
 		2E456100250CC76F00267DD8 /* JSONSchemaSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F0250CC76F00267DD8 /* JSONSchemaSupport.swift */; };
 		2E456101250CC76F00267DD8 /* Dob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F1250CC76F00267DD8 /* Dob.swift */; };
 		2E456102250CC76F00267DD8 /* Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F2250CC76F00267DD8 /* Timezone.swift */; };
-		2E456103250CC76F00267DD8 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F3250CC76F00267DD8 /* Title.swift */; };
 		2E456104250CC76F00267DD8 /* UsersResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F4250CC76F00267DD8 /* UsersResponseModel.swift */; };
 		2E456105250CC76F00267DD8 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F5250CC76F00267DD8 /* Name.swift */; };
 		2E456106250CC76F00267DD8 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4560F6250CC76F00267DD8 /* Coordinates.swift */; };
@@ -42,6 +40,10 @@
 		2E54FCD4250CBC1500EAEEB7 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */; };
 		2E592F7E250D1EE900884FB2 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E54FCCD250CB99900EAEEB7 /* FakeData.json */; };
 		2E592F80250D28F800884FB2 /* RestAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E592F7F250D28F800884FB2 /* RestAPIServiceTests.swift */; };
+		2E592F82250DB0FB00884FB2 /* TinderUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E592F81250DB0FB00884FB2 /* TinderUserInfoViewController.swift */; };
+		2E592F84250DB11800884FB2 /* TinderMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E592F83250DB11800884FB2 /* TinderMapViewController.swift */; };
+		2E592F86250DB12900884FB2 /* TinderCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E592F85250DB12900884FB2 /* TinderCalendarViewController.swift */; };
+		2E592F8A250E026800884FB2 /* IDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E592F89250E026800884FB2 /* IDUser.swift */; };
 		2E7B2B75250D1099000F0FCD /* RestAPIServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B2B74250D1099000F0FCD /* RestAPIServiceImpl.swift */; };
 		2E7B2B77250D1423000F0FCD /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B2B76250D1423000F0FCD /* MockAPIService.swift */; };
 		2E7B2B79250D14B6000F0FCD /* TinderListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B2B78250D14B6000F0FCD /* TinderListViewModelTests.swift */; };
@@ -84,13 +86,11 @@
 		2E4560E7250CC76F00267DD8 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2E4560E8250CC76F00267DD8 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		2E4560E9250CC76F00267DD8 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
-		2E4560EA250CC76F00267DD8 /* ID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		2E4560ED250CC76F00267DD8 /* Street.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Street.swift; sourceTree = "<group>"; };
 		2E4560EE250CC76F00267DD8 /* Postcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postcode.swift; sourceTree = "<group>"; };
 		2E4560F0250CC76F00267DD8 /* JSONSchemaSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSchemaSupport.swift; sourceTree = "<group>"; };
 		2E4560F1250CC76F00267DD8 /* Dob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dob.swift; sourceTree = "<group>"; };
 		2E4560F2250CC76F00267DD8 /* Timezone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timezone.swift; sourceTree = "<group>"; };
-		2E4560F3250CC76F00267DD8 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		2E4560F4250CC76F00267DD8 /* UsersResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersResponseModel.swift; sourceTree = "<group>"; };
 		2E4560F5250CC76F00267DD8 /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		2E4560F6250CC76F00267DD8 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
@@ -106,6 +106,10 @@
 		2E54FCD1250CBC1500EAEEB7 /* TinderSwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderSwipeView.swift; sourceTree = "<group>"; };
 		2E54FCD2250CBC1500EAEEB7 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
 		2E592F7F250D28F800884FB2 /* RestAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIServiceTests.swift; sourceTree = "<group>"; };
+		2E592F81250DB0FB00884FB2 /* TinderUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUserInfoViewController.swift; sourceTree = "<group>"; };
+		2E592F83250DB11800884FB2 /* TinderMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderMapViewController.swift; sourceTree = "<group>"; };
+		2E592F85250DB12900884FB2 /* TinderCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCalendarViewController.swift; sourceTree = "<group>"; };
+		2E592F89250E026800884FB2 /* IDUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDUser.swift; sourceTree = "<group>"; };
 		2E7B2B74250D1099000F0FCD /* RestAPIServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPIServiceImpl.swift; sourceTree = "<group>"; };
 		2E7B2B76250D1423000F0FCD /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		2E7B2B78250D14B6000F0FCD /* TinderListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderListViewModelTests.swift; sourceTree = "<group>"; };
@@ -217,10 +221,10 @@
 		2E4560E6250CC76F00267DD8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E592F89250E026800884FB2 /* IDUser.swift */,
 				2E4560F6250CC76F00267DD8 /* Coordinates.swift */,
 				2E4560F1250CC76F00267DD8 /* Dob.swift */,
 				2E4560E8250CC76F00267DD8 /* Gender.swift */,
-				2E4560EA250CC76F00267DD8 /* ID.swift */,
 				2E4560F0250CC76F00267DD8 /* JSONSchemaSupport.swift */,
 				2E4560E7250CC76F00267DD8 /* Location.swift */,
 				2E4560F5250CC76F00267DD8 /* Name.swift */,
@@ -228,7 +232,6 @@
 				2E4560EE250CC76F00267DD8 /* Postcode.swift */,
 				2E4560ED250CC76F00267DD8 /* Street.swift */,
 				2E4560F2250CC76F00267DD8 /* Timezone.swift */,
-				2E4560F3250CC76F00267DD8 /* Title.swift */,
 				2E456108250CCE6C00267DD8 /* User.swift */,
 				2E4560F4250CC76F00267DD8 /* UsersResponseModel.swift */,
 			);
@@ -241,6 +244,9 @@
 				2E45610D250CD17700267DD8 /* CustomView.swift */,
 				2E45610E250CD17700267DD8 /* CustomView.xib */,
 				2E07EF9F250CAFBC004CFBF5 /* TinderViewController.swift */,
+				2E592F81250DB0FB00884FB2 /* TinderUserInfoViewController.swift */,
+				2E592F83250DB11800884FB2 /* TinderMapViewController.swift */,
+				2E592F85250DB12900884FB2 /* TinderCalendarViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -446,7 +452,6 @@
 				2E456104250CC76F00267DD8 /* UsersResponseModel.swift in Sources */,
 				2E4560F7250CC76F00267DD8 /* Location.swift in Sources */,
 				2E54FCD3250CBC1500EAEEB7 /* TinderSwipeView.swift in Sources */,
-				2E4560FA250CC76F00267DD8 /* ID.swift in Sources */,
 				2E456106250CC76F00267DD8 /* Coordinates.swift in Sources */,
 				2E07EF9C250CAFBC004CFBF5 /* AppDelegate.swift in Sources */,
 				2E456102250CC76F00267DD8 /* Timezone.swift in Sources */,
@@ -457,9 +462,12 @@
 				2E7B2B75250D1099000F0FCD /* RestAPIServiceImpl.swift in Sources */,
 				2E4560FE250CC76F00267DD8 /* Postcode.swift in Sources */,
 				2E45611A250CE0AF00267DD8 /* RestAPIServiceProtocol.swift in Sources */,
-				2E456103250CC76F00267DD8 /* Title.swift in Sources */,
+				2E592F82250DB0FB00884FB2 /* TinderUserInfoViewController.swift in Sources */,
 				2E4560E4250CC5FF00267DD8 /* Storage.swift in Sources */,
 				2E54FCD4250CBC1500EAEEB7 /* TinderCard.swift in Sources */,
+				2E592F86250DB12900884FB2 /* TinderCalendarViewController.swift in Sources */,
+				2E592F84250DB11800884FB2 /* TinderMapViewController.swift in Sources */,
+				2E592F8A250E026800884FB2 /* IDUser.swift in Sources */,
 				2E456116250CD89100267DD8 /* UserViewModel.swift in Sources */,
 				2E4560F9250CC76F00267DD8 /* Picture.swift in Sources */,
 				2E07EF9E250CAFBC004CFBF5 /* SceneDelegate.swift in Sources */,

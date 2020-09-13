@@ -15,13 +15,13 @@ class RestAPIServiceImpl: RestAPIServiceProtocol {
 
   func request(urlString: String, completion: @escaping ((UsersResponseModel?, Error?) -> Void)) {
     let url = URL(string: urlString)
-    guard let _url = url else {
+    guard let baseUrl = url else {
       let dic = [NSLocalizedDescriptionKey: "Invalid url request"]
       let nsError = NSError(domain: "ahdenglish.com", code: -999, userInfo: dic)
       completion(nil, nsError)
       return
     }
-    let task = URLSession.shared.usersResponseModelTask(with: _url,
+    let task = URLSession.shared.usersResponseModelTask(with: baseUrl,
                                                         completionHandler: { usersResponseModel, _, error in
                                                           completion(usersResponseModel, error)
                                                         })

@@ -51,7 +51,7 @@ class TinderListViewModelTests: XCTestCase {
   }
 
   func testListViewModelLoadCached() {
-    sut.loadCahcedData()
+    sut.loadFavUser()
     XCTAssertNotNil(sut.users)
   }
 
@@ -70,7 +70,6 @@ class TinderListViewModelTests: XCTestCase {
     XCTAssertNotNil(model?.registered)
     XCTAssertNotNil(model?.phone)
     XCTAssertNotNil(model?.cell)
-    XCTAssertNotNil(model?.id)
     XCTAssertNotNil(model?.picture)
     XCTAssertNotNil(model?.nat)
 
@@ -80,9 +79,6 @@ class TinderListViewModelTests: XCTestCase {
 
     XCTAssertNotNil(model?.dob?.age)
     XCTAssertNotNil(model?.dob?.date)
-
-    XCTAssertNotNil(model?.id?.name)
-    XCTAssertNotNil(model?.id?.value)
 
     XCTAssertNotNil(model?.location?.street)
     XCTAssertNotNil(model?.location?.city)
