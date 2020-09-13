@@ -22,10 +22,7 @@ func newJSONEncoder() -> JSONEncoder {
 
 extension URLSession {
   fileprivate func codableTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-    var request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 120)
-    request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-
-    return self.dataTask(with: request) { data, response, networkError in
+    return self.dataTask(with: url) { data, response, networkError in
       guard let data = data, networkError == nil else {
         completionHandler(nil, response, networkError)
         return
