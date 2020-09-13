@@ -69,12 +69,12 @@ class CustomView: UIView {
   @IBAction func buttonTapped(_ sender: UIButton) {
     if let infoSection = UserInfoSection(rawValue: sender.tag) {
       switch infoSection {
-        case .personal, .calendar, .location:
-          handlerDisplayUserInfo(at: infoSection)
-        case .lock:
-          debugPrint("Lock?")
-        case .phone:
-          handleCallPhoneNumber(userViewModel.phone)
+      case .personal, .calendar, .location:
+        handlerDisplayUserInfo(at: infoSection)
+      case .lock:
+        debugPrint("Lock?")
+      case .phone:
+        handleCallPhoneNumber(userViewModel.phone)
       }
     }
   }
@@ -105,22 +105,22 @@ class CustomView: UIView {
 
   func infoViewController(at section: UserInfoSection) -> UIViewController? {
     switch section {
-      case .personal:
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(
-          withIdentifier: TinderUserInfoViewController.className)
-        return viewController
-      case .calendar:
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(
-          withIdentifier: TinderCalendarViewController.className)
-        return viewController
-      case .location:
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: TinderMapViewController.className)
-        return viewController
-      default:
-        return nil
+    case .personal:
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let viewController = storyboard.instantiateViewController(
+        withIdentifier: TinderUserInfoViewController.className)
+      return viewController
+    case .calendar:
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let viewController = storyboard.instantiateViewController(
+        withIdentifier: TinderCalendarViewController.className)
+      return viewController
+    case .location:
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let viewController = storyboard.instantiateViewController(withIdentifier: TinderMapViewController.className)
+      return viewController
+    default:
+      return nil
     }
   }
 }

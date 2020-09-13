@@ -62,7 +62,7 @@ public class TinderSwipeView<Element>: UIView {
     resetData()
     allCards.append(contentsOf: elements)
 
-    for (index, element) in elements.enumerated() {
+    elements.enumerated().forEach { index, element in
       if loadedCards.count < bufferSize {
         let cardView = createTinderCard(index: index, element: element)
         if loadedCards.isEmpty {

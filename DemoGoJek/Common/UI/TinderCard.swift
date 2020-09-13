@@ -173,9 +173,9 @@ class TinderCard: UIView {
   func rollBackCard() {
     UIView.animate(withDuration: 0.5, animations: {
       self.alpha = 0
-    }) { _ in
+    }, completion: { (_) in
       self.removeFromSuperview()
-    }
+    })
   }
 
   /*

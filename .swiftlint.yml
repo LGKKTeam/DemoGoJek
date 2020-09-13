@@ -1,13 +1,4 @@
 disabled_rules:
-- trailing_whitespace
-- colon
-- comma
-- control_statement
-- for_where
-- unneeded_break_in_switch
-- multiple_closures_with_trailing_closure
-- opening_brace
-- switch_case_alignment
 opt_in_rules:
 - empty_count
 - empty_string

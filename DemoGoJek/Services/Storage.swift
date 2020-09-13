@@ -21,10 +21,10 @@ public class Storage {
     var searchPathDirectory: FileManager.SearchPathDirectory
 
     switch directory {
-      case .documents:
-        searchPathDirectory = .documentDirectory
-      case .caches:
-        searchPathDirectory = .cachesDirectory
+    case .documents:
+      searchPathDirectory = .documentDirectory
+    case .caches:
+      searchPathDirectory = .cachesDirectory
     }
 
     if let url = FileManager.default.urls(for: searchPathDirectory, in: .userDomainMask).first {
