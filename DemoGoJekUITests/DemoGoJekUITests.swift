@@ -6,8 +6,10 @@
 //  Copyright © 2020 Coc Coc. All rights reserved.
 //
 
+@testable import DemoGoJek
 import XCTest
 
+// swiftlint:disable line_length
 class DemoGoJekUITests: XCTestCase {
   override func setUpWithError() throws {
     continueAfterFailure = false
@@ -16,12 +18,23 @@ class DemoGoJekUITests: XCTestCase {
   override func tearDownWithError() throws {}
 
   func testExample() throws {
-    // UI tests must launch the application that they test.
     let app = XCUIApplication()
     app.launch()
+    let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0)
+    element.buttons["ic user"].tap()
+    element.buttons["ic calendar"].tap()
+    element.buttons["ic location"].tap()
+    element.buttons["ic lock"].tap()
 
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    let element1 = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element
+    element1.swipeRight()
+    element1.swipeRight()
+    element1.swipeLeft()
+    element1.swipeLeft()
+    element1.swipeRight()
+    element1.swipeLeft()
+    app.buttons["ic heart"].tap()
+    app.buttons["ic refresh"].tap()
   }
 
   func testLaunchPerformance() throws {
